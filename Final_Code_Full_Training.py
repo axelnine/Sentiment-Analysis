@@ -4,13 +4,6 @@ Created on Fri Feb 10 16:57:40 2017
 
 @author: Eight
 """
-
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jan 23 17:52:39 2017
-
-@author: Eight
-"""
 #import pymysql,sys,global_variable as gv
 from itertools import chain
 from functools import partial
@@ -177,6 +170,9 @@ from sklearn.feature_extraction.text import TfidfTransformer,CountVectorizer
 ######################################################################################################################################
 
 def remove_punctuation(s):
+	'''
+	Function to remove punctuation from text
+	'''
     a = set(string.punctuation)
     a.remove('.')
     statement = ''.join([i for i in s if i not in a])
